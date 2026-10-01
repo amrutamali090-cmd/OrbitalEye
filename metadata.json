@@ -1,0 +1,6 @@
+{
+  "name": "OrbitalEye - Satellite Intelligence for Flood Response",
+  "description": "Satellite geospatial intelligence platform for rapid flood extent mapping, infrastructure damage assessment, and cut-off settlement network analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

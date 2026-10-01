@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* Leaflet Dark UI Overrides */
+.leaflet-container {
+  background-color: #07090e !important;
+  font-family: inherit;
+}
+
+.leaflet-tile {
+  background-color: #07090e !important;
+}
+
+.leaflet-tile-container {
+  background-color: transparent !important;
+}
+
+/* SAR Radar C-Band active backscatter processing */
+.sar-radar-layer .leaflet-tile-pane {
+  filter: grayscale(1) contrast(2.05) brightness(0.85);
+}
+
+/* Sentinel-2 Optical enhanced multispectral visualization */
+.optical-layer .leaflet-tile-pane {
+  filter: contrast(1.15) saturate(1.25) brightness(0.95);
+}
+
+.geographic-topo-layer .leaflet-tile-pane {
+  filter: none !important;
+}
+
+.sentinel-raster-before, .sentinel-raster-after, .sentinel-raster-single {
+  image-rendering: auto;
+  pointer-events: none;
+}
+
+.dark-map-tiles .leaflet-tile-pane {
+  filter: brightness(0.7) invert(1) contrast(2.6) hue-rotate(205deg) saturate(0.25);
+}
+
+.orbitaleye-map-tooltip {
+  background-color: rgba(9, 12, 20, 0.95) !important;
+  border: 1px solid rgba(6, 182, 212, 0.4) !important;
+  color: #f1f5f9 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 11px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 6px !important;
+  padding: 4px 8px !important;
+}
+
+.orbitaleye-map-tooltip::before {
+  border-top-color: rgba(9, 12, 20, 0.95) !important;
+}
+
+.custom-map-icon, .custom-settlement-icon, .custom-bridge-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090c14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Print Styles for Situation Report */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  header, nav, .print\:hidden {
+    display: none !important;
+  }
+}
+
